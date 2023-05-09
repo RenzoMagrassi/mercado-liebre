@@ -2,7 +2,7 @@ const express = require ("express");
 const path = require ("path");
 const app = express();
 app.use (express.static("public"));
-const PORT = process.env.PORT  || 3000;
+const PORT = process.env.PORT  || 3001;
 
 app.get('/', (req, res)=>{
 
@@ -21,5 +21,4 @@ app.get('/login.html', (req, res)=>{
 })
 
 
-app.listen(PORT,() =>
-console.log("servidor escuchando en el puerto" + PORT ));
+app.listen(PORT,() => console.log("servidor corriendo en el puerto ${port}"));
